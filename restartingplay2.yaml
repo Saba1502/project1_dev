@@ -1,0 +1,11 @@
+--- 
+- name: Restarting SShd
+  hosts: all 
+  gather_facts: false 
+  tasks:
+    - name: Restarted Ssh
+      service:
+        name: sshd
+        state: restarted
+
+
