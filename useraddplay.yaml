@@ -1,0 +1,9 @@
+---
+- name: Adding user
+  hosts: all
+  gather_facts: false 
+  tasks: 
+    - name: Adding user 
+      user: 
+        name: rahman01
+        state: present 
