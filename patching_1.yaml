@@ -1,1 +1,11 @@
 # This playbook is going to patch all servers
+--- 
+- name: Patching Servers
+  hosts: all
+  gather_facts: false 
+  
+  tasks: 
+    - name: Updating all packages 
+      dmf: 
+        name: "*"
+        state: latest 
